@@ -1,0 +1,26 @@
+{
+  "name": "exercicio-resolvido-22",
+  "version": "1.0.0",
+  "description": "Modulo 22",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.6.0",
+    "ts-loader": "^9.4.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/**/*js",
+    "cypress-cucumber-preprocessor":{"nonGlobalStepDefinitions":true}
+  },
+  
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "faker": "^6.6.6"
+  }
+}
