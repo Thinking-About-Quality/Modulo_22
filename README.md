@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h3> "Exercicio do Módulo 22 " </h3>
 
 <h4><p>Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:</h4>
