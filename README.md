@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<h1> "Exercicio do Módulo 22 " </h1>
+<h2> "Exercicio do Módulo 22 " </h2>
 
 <h1><p>Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:</h1>
 <p>1-Instalar setup cucumber</p>
