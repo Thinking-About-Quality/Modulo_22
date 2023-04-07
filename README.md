@@ -3,23 +3,10 @@
 
 <h1><p>Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:</h1>
 <p>1-Instalar setup cucumber</p>
-    npm install --save-dev @badeball/cypress-cucumber-preprocessor
-    npm install --save-dev @bahmutov/cypress-esbuild-preprocessor
-    npm install ts-loader --save-dev
+   <p>npm install --save-dev @badeball/cypress-cucumber-preprocessor</p>
+   <p>npm install --save-dev @badeball/cypress-cucumber-preprocessor</p>
+    <p>npm install ts-loader --save-dev</p>
 <p>2-Instalar Faker </p>
-    npm i faker ">
+<p>npm i faker</p>
     </p>
-
-
-
   
-=======
-"# Exercicio do Módulo 22" 
-"Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:"
-1-Instalar setup cucumber
-    npm install --save-dev @badeball/cypress-cucumber-preprocessor
-    npm install --save-dev @bahmutov/cypress-esbuild-preprocessor
-    npm install ts-loader --save-dev
-2-Instalar Faker 
-    npm i faker    
->>>>>>> c6981559c215d16f131283c6a9779be738487de9
