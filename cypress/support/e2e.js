@@ -15,14 +15,14 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-//import 'cypress-plugin-api'
+import 'cypress-plugin-api'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-import loginPage from './login.page'
-import homePage from './home.page'
-import pedidosPage from './pedidos.page'
-import produtoPage from './produto.page'
-import carrinhoPage from './carrinho.page'
+// import loginPage from './login.page'
+// import homePage from './home.page'
+// import pedidosPage from './pedidos.page'
+// import produtoPage from './produto.page'
+// import carrinhoPage from './carrinho.page'
 
-export { loginPage, homePage, pedidosPage, produtoPage, carrinhoPage } 
+// export { loginPage, homePage, pedidosPage, produtoPage, carrinhoPage } 

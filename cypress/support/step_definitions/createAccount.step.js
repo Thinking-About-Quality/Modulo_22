@@ -7,25 +7,24 @@ import {
   And,
 } from "@badeball/cypress-cucumber-preprocessor";
 
-const url = "http://lojaebac.ebaconline.art.br/minha-conta/";
+const url = "minha-conta/";
 const conta = {
   email: `${faker.internet.email()}`,
   password: `${faker.internet.password()}`,
 };
 
-Given("I am and windows create account", () => {
+Given("estou na tela minha conta", () => {
   cy.visit(url);
 });
-When("fill in the email field", () => {
+When("preencho o campo email", () => {
   cy.get("#reg_email").type(conta.email);
 });
-When("fill in the password field", () => {
-  cy.get("#reg_password").type(conta.password);
+When("preencho o campo senha", () => {
+  cy.get("#reg_password").type(conta.password,{log: false });
 });
-When("click on the register button", () => {
+When("clico no botão register", () => {
   cy.get(':nth-child(4) > .button').click({ force: true });
 });
-Then("must create account successfully", () => {
-  //cy.get(".page-title").should("be.visible");
+Then("deve criar uma nova conta com sucesso", () => {
   cy.get(".woocommerce-MyAccount-content > :nth-child(3)").should("be.visible");
 });

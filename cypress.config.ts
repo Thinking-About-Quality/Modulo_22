@@ -7,10 +7,17 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 export default defineConfig({
   projectId: '7ins6z',
   e2e: {
-    
     baseUrl: 'http://lojaebac.ebaconline.art.br/',
-    specPattern: "cypress/e2e/**/.",
-    //{js,jsx,ts,tsx}
+    "chromeWebSecurity": false,
+    env:{
+      hideCredentials:false,
+      requestMode:false,
+      snapshotOnly:false,
+      failOnStatusCode: false
+    },
+    specPattern: 'cypress/e2e/*.{js,jsx,ts,tsx,feature}',
+    //{feature,js,jsx,ts,tsx}',
+    
     
     async setupNodeEvents(
       on: Cypress.PluginEvents,

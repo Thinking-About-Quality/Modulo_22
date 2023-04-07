@@ -1,9 +1,9 @@
 
-Feature: Account new
+Feature: Criar nova conta
 
-  Scenario: create Account Sucess
-    Given I am and windows create account
-    And   fill in the email field
-    And   fill in the password field
-    And   click on the register button
-    Then  must create account successfully
+  Scenario: Criar uma nova conta com sucesso
+    Given estou na tela minha conta
+    When preencho o campo email
+    And  preencho o campo senha
+    And  clico no botão register
+    Then deve criar uma nova conta com sucesso
