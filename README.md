@@ -1,7 +1,5 @@
 "# Exercicio do Módulo 22" 
-
-
-"Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:
+"Para ter maior experiencia na execução desse projeto, deve-se seguir alguns requisitos:"
 1-Instalar setup cucumber
     npm install --save-dev @badeball/cypress-cucumber-preprocessor
     npm install --save-dev @bahmutov/cypress-esbuild-preprocessor
