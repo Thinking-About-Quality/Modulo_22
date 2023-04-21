@@ -3,10 +3,24 @@
 import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
 import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
 import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild";
+// const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+import allureWriter from "@shelex/cypress-allure-plugin/writer";
+
 
 export default defineConfig({
+  
+  
   projectId: '7ins6z',
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
+ 
+ 
   e2e: {
+    
+   
+    
     baseUrl: 'http://lojaebac.ebaconline.art.br/',
     "chromeWebSecurity": false,
     env:{
@@ -16,11 +30,13 @@ export default defineConfig({
       failOnStatusCode: false
     },
     specPattern: 'cypress/e2e/*.{js,jsx,ts,tsx,feature}',
-    //{feature,js,jsx,ts,tsx}',
+    
     
     
     async setupNodeEvents(
+      
       on: Cypress.PluginEvents,
+      
       config: Cypress.PluginConfigOptions
     ): Promise<Cypress.PluginConfigOptions> {
       // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
@@ -31,11 +47,15 @@ export default defineConfig({
         createBundler({
           plugins: [createEsbuildPlugin(config)],
         })
-      );
-
+      )
+    
+      allureWriter(on, config);
+        
+     
       // Make sure to return the config object as it might have been modified by the plugin.
       return config;
     },
+  
     
   },
 });

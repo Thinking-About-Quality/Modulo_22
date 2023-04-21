@@ -4,21 +4,52 @@
   "description": "Modulo 22",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --reporter mochawesome--reporter-options reportDir=\"cypress/results\",overwrite=false,html=false,json=true && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json&&npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json",
+    "teste:allure": "npx cypress run --env allure=true",
+    "allure:open": "npx allure serve",
+    "percy": "export PERCY_TOKEN=bc81bfd5e8cae56edd09bd986df237cf65568c3791a67aaddab1bea42f36f77e percy exec -- npx cypress run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.1.5",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@shelex/cypress-allure-plugin": "^2.38.3",
+    "@types/mochawesome": "^6.2.1",
     "cypress": "^12.6.0",
-    "ts-loader": "^9.4.2"
+    "ts-loader": "^9.4.2",
+    "tsconfig-paths": " 3.10.1 "
   },
- 
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
-    "faker": "^6.6.6",
-    "faker-br": "^0.4.1"
+    "@percy/cli": "^1.23.0",
+    "@percy/cypress": "^3.1.2",
+    "allure-commandline": "^2.21.0",
+    "faker": "^5.5.3",
+    "faker-br": "^0.4.1",
+    "mochawesome": "^7.1.3"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "types": [
+      "@shelex/cypress-allure-plugin"
+    ],
+    "noEmit": true
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-ndjson/cucumber-report.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "formatter": "cucumber-json-formatter",
+      "output": "cypress/reports/cucumber-json/cucumber-report.json"
+    }
   }
-  
 }

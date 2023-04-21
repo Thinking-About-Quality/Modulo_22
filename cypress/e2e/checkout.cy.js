@@ -1,5 +1,4 @@
 /// <reference types ="cypress"/>
-/// <reference types ="cypress"/>
 const usuario = require("../fixtures/data.json");
 const produto = require("../fixtures/product.json");
 const checkoutPage = require("../support/pages/checkout.page");
@@ -15,4 +14,5 @@ describe("Login", () => {
       cy.get('.woocommerce-notice').should('have.text','Obrigado. Seu pedido foi recebido.')
        
   });
+ 
 });

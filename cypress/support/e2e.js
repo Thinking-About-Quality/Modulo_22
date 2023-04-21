@@ -26,3 +26,5 @@ import 'cypress-plugin-api'
 // import carrinhoPage from './carrinho.page'
 
 // export { loginPage, homePage, pedidosPage, produtoPage, carrinhoPage } 
+import  '@shelex/cypress-allure-plugin'
+import '@percy/cypress'
